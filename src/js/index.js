@@ -14,14 +14,22 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
+          <h1>${variables.name} ${variables.lastname}</h1>
+          <h2>${variables.role}</h2>
+          <h3>${variables.city}, ${variables.country}</h3>
+          <ul class="${variables.socialMediaPosition}">
+            <li><a href="${
+              variables.twitter
+            }"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="${
+              variables.github
+            }"><i class="fa fa-github"></i></a></li>
+            <li><a href="${
+              variables.linkedin
+            }"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="${
+              variables.instagram
+            }"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -35,9 +43,10 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://66.media.tumblr.com/2d02195b44396d5cdfe6e849d35e5a01/tumblr_nwsqm0cYTY1rw87mto6_500.gifv",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL: "https://uploads.scratch.mit.edu/users/avatars/1361/4900.png",
     // social media bar position (left or right)
     socialMediaPosition: "left",
     // social media usernames
